@@ -9,7 +9,6 @@
  payload: any,
  error: Error | any
  mate: any
-
  */
 
 import {
