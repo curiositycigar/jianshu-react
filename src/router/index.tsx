@@ -24,12 +24,3 @@ class RouterConfig extends React.Component<any, any> {
 }
 
 export default RouterConfig
-
-// export default (
-//   <Router>
-//     <Route path="/" component={App}>
-//       <Route path="home" component={Home}/>
-//       <Route path="home1" component={Home1}/>
-//     </Route>
-//   </Router>
-// )
