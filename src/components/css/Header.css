@@ -79,6 +79,11 @@
 .sign-in-field a {
   color: black;
   font-weight: 600;
+  transition: all .3s;
+}
+
+.sign-in-field a:hover{
+  color: #ea6f5a;
 }
 
 .sign-in-field span {
