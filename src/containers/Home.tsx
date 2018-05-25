@@ -3,28 +3,32 @@
  */
 import * as React from 'react'
 import Header from '../components/Header'
+import {
+    Route
+} from 'react-router-dom'
+import Article from './Article'
 // import propTypes = require('prop-types')
 // import classNames = require('classnames')
 // import {omit} from 'lodash'
 
-class Cindex extends React.Component<any, any> {
-  constructor (props: any) {
-    super(props)
-  }
+class Home extends React.Component<any, any> {
+    constructor(props: any) {
+        super(props)
+    }
 
-  public render () {
-    return (
-      <div id="app">
-        <Header/>
-        <section style={{height: 1000}}>
-          123
-        </section>
-        <footer>
-          this is footer
-        </footer>
-      </div>
-    )
-  }
+    public render() {
+        return (
+            <div id="app">
+                <Header/>
+                <section style={{height: 1000}}>
+                    <Route path="article/:id" component={Article}/>
+                </section>
+                <footer>
+                    this is footer
+                </footer>
+            </div>
+        )
+    }
 }
 
-export default Cindex
+export default Home

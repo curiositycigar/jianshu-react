@@ -32,7 +32,7 @@ class Header extends React.Component<any, any> {
                 <Link className="active" to="/">首页</Link>
               </li>
               <li>
-                <Link to="/">菜单项</Link>
+                <Link to="/article/xhfftbsrugbv">菜单项</Link>
               </li>
             </ul>
           </nav>

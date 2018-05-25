@@ -13,18 +13,18 @@ import "./App.css";
 class App extends React.Component<any, any> {
   public props: any
 
-  constructor (props: any) {
+  constructor(props: any) {
     super(props)
   }
 
-  public render () {
+  public render() {
     console.log(this.props.children)
     return (
       <HashRouter>
         <Switch>
-          <Route exact={true} path="/" component={Home}/>
           <Route path="/signin" component={SignIn}/>
           <Route path="/signup" component={SignUp}/>
+          <Route path="/" component={Home}/>
           <Route path="*" component={NotFound}/>
         </Switch>
       </HashRouter>
