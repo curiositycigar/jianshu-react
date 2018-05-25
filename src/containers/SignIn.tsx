@@ -13,7 +13,7 @@ class SignIn extends React.Component<any, any> {
 
   public render () {
     return (
-      <div/>
+      <div>sign in</div>
     )
   }
 }
