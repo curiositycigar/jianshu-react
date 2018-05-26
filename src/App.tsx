@@ -9,6 +9,7 @@ import SignIn from './containers/SignIn'
 import SignUp from './containers/SignUp'
 import Home from './containers/Home'
 import "./App.css";
+import Article from "./containers/Article";
 
 class App extends React.Component<any, any> {
   public props: any
@@ -22,9 +23,10 @@ class App extends React.Component<any, any> {
     return (
       <HashRouter>
         <Switch>
+          <Route exact={true} path="/" component={Home}/>
           <Route path="/signin" component={SignIn}/>
           <Route path="/signup" component={SignUp}/>
-          <Route path="/" component={Home}/>
+          <Route path="/article/:id" component={Article}/>
           <Route path="*" component={NotFound}/>
         </Switch>
       </HashRouter>

@@ -1,13 +1,23 @@
 import * as React from 'react'
+import Container from '../components/Container'
 
 class Article extends React.Component {
+  public props: any
+
   constructor(props: any) {
     super(props)
   }
 
   public render() {
     console.log(this.props)
-    return <div>article</div>
+    return (
+      <Container>
+        <p>this is article</p>
+        <p>this is article</p>
+        <p>this is article</p>
+        <p>{this.props.match.params.id}</p>
+      </Container>
+    )
   }
 }
 
