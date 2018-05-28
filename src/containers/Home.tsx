@@ -2,7 +2,6 @@
  * Created by YOU on 2018/4/28.
  */
 import * as React from 'react'
-import Container from '../components/Container'
 // import classNames = require('classnames')
 // import {omit} from 'lodash'
 
@@ -13,14 +12,14 @@ class Home extends React.Component<any, any> {
 
   public render() {
     return (
-      <Container>
-          <div>this is home</div>
-          <div>this is home</div>
-          <div>this is home</div>
-          <div>this is home</div>
-          <div>this is home</div>
-          <div>this is home</div>
-      </Container>
+      <div>
+        <div>home</div>
+        <div>home</div>
+        <div>home</div>
+        <div>home</div>
+        <div>home</div>
+        <div>home</div>
+      </div>
     )
   }
 }

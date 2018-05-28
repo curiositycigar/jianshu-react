@@ -2,34 +2,31 @@
  * Created by YOU on 2018/4/28.
  */
 import * as React from 'react'
+import Container from '../components/Container'
 import {
-  Link,
-  Route,
+  Switch,
+  Route
 } from 'react-router-dom'
-// import propTypes = require('prop-types')
+import Home from './Home'
+import Article from './Article'
 // import classNames = require('classnames')
 // import {omit} from 'lodash'
 
 class Index extends React.Component<any, any> {
-  public props: any
-
-  constructor (props: any) {
+  constructor(props: any) {
     super(props)
   }
 
-  public render () {
+  public render() {
     return (
-      <div>
-        <Link to={`${this.props.match.url}/lisa`}>Lisa</Link>
-        <h1>Home</h1>
-        <Route path={`${this.props.match.url}/:name`} component={User}/>
-      </div>
+      <Container>
+        <Switch>
+          <Route path="/home/article/:id" component={Article}/>
+          <Route path="" component={Home}/>
+        </Switch>
+      </Container>
     )
   }
 }
-
-const User = (props: any) => (<div>
-  {props.match.params.name}
-</div>)
 
 export default Index

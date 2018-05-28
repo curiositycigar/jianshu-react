@@ -1,15 +1,15 @@
 import * as React from "react";
 import {
-  HashRouter,
+  HashRouter as Router,
   Switch,
   Route,
+  Redirect
 } from 'react-router-dom'
 import NotFound from './components/NotFound'
 import SignIn from './containers/SignIn'
 import SignUp from './containers/SignUp'
-import Home from './containers/Home'
+import Index from './containers/Index'
 import "./App.css";
-import Article from "./containers/Article";
 
 class App extends React.Component<any, any> {
   public props: any
@@ -21,15 +21,15 @@ class App extends React.Component<any, any> {
   public render() {
     console.log(this.props.children)
     return (
-      <HashRouter>
+      <Router>
         <Switch>
-          <Route exact={true} path="/" component={Home}/>
+          <Route path="/home" component={Index}/>
           <Route path="/signin" component={SignIn}/>
           <Route path="/signup" component={SignUp}/>
-          <Route path="/article/:id" component={Article}/>
+          <Redirect exact={true} from="/" to="/home"/>
           <Route path="*" component={NotFound}/>
         </Switch>
-      </HashRouter>
+      </Router>
     );
   }
 }
