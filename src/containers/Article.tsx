@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Container from '../components/Container'
 
 class Article extends React.Component {
   public props: any
@@ -10,12 +11,12 @@ class Article extends React.Component {
   public render() {
     console.log(this.props)
     return (
-      <div>
+      <Container>
         <p>this is article</p>
         <p>this is article</p>
         <p>this is article</p>
         <p>{this.props.match.params.id}</p>
-      </div>
+      </Container>
     )
   }
 }

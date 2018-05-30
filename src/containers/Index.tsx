@@ -2,7 +2,6 @@
  * Created by YOU on 2018/4/28.
  */
 import * as React from 'react'
-import Container from '../components/Container'
 import {
   Switch,
   Route
@@ -13,18 +12,16 @@ import Article from './Article'
 // import {omit} from 'lodash'
 
 class Index extends React.Component<any, any> {
-  constructor(props: any) {
+  constructor (props: any) {
     super(props)
   }
 
-  public render() {
+  public render () {
     return (
-      <Container>
-        <Switch>
-          <Route path="/home/article/:id" component={Article}/>
-          <Route path="" component={Home}/>
-        </Switch>
-      </Container>
+      <Switch>
+        <Route path="/home/article/:id" component={Article}/>
+        <Route path="" component={Home}/>
+      </Switch>
     )
   }
 }

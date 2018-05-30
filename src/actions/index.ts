@@ -12,26 +12,53 @@
  */
 
 import {
-  ADD_TODO,
+  SIGN_IN,
+  SIGN_OUT,
 } from '../constants'
 
-type IAddTodo = (text: string) => {
+// class CustomPromise<FUN, DATA> extends Promise {
+//   private initData: any
+//
+//   constructor(fun: FUN, initData: DATA) {
+//     console.log(fun)
+//     super(fun)
+//     this.initData = initData
+//   }
+//
+//   public init(fun: any) {
+//     fun(this.initData || true)
+//     return this
+//   }
+// }
+
+interface ISignIn {
   payload: {
-    id: number,
-    text: string,
+    login: boolean,
+    data: {
+      name: string,
+    }
   },
   type: string,
 }
 
-let nextTodoId: number = 0
-
-export const addTodo: IAddTodo = (text) => {
+export const signIn = (name: string, password: string): ISignIn => {
   return {
     payload: {
-      id: nextTodoId++,
-      text,
+      data: {
+        name,
+      },
+      login: true,
     },
-    type: ADD_TODO,
+    type: SIGN_IN,
+  }
+}
+
+export const signOut = () => {
+  return {
+    payload: {
+      login: false,
+    },
+    type: SIGN_OUT,
   }
 }
 /* ------------example */

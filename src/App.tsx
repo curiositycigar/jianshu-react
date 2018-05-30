@@ -14,11 +14,11 @@ import "./App.css";
 class App extends React.Component<any, any> {
   public props: any
 
-  constructor(props: any) {
+  constructor (props: any) {
     super(props)
   }
 
-  public render() {
+  public render () {
     console.log(this.props.children)
     return (
       <Router>
@@ -30,7 +30,7 @@ class App extends React.Component<any, any> {
           <Route path="*" component={NotFound}/>
         </Switch>
       </Router>
-    );
+    )
   }
 }
 
