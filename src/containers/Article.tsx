@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Container from '../components/Container'
+import Container from './Container'
 
 class Article extends React.Component {
   public props: any

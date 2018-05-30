@@ -2,7 +2,7 @@
  * Created by YOU on 2018/4/28.
  */
 import * as React from 'react'
-import Container from '../components/Container'
+import Container from './Container'
 // import classNames = require('classnames')
 // import {omit} from 'lodash'
 

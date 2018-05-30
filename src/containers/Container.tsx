@@ -2,13 +2,16 @@
  * Created by YOU on 2018/5/8.
  */
 import * as React from "react";
-import './css/Container.css'
+import '../components/css/Container.css'
 import {
   Link,
 } from 'react-router-dom'
 import {
   connect
 } from 'react-redux'
+
+import Search from '../components/Search'
+
 import {
   signIn,
   signOut,
@@ -72,7 +75,7 @@ class Header extends React.Component<any, any> {
                   <Link to="/home/article/xhfftbsrugbv">菜单项</Link>
                 </li>
                 <li>
-                  <input type="text"/>
+                  <Search/>
                 </li>
               </ul>
             </nav>
