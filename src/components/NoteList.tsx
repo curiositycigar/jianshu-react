@@ -2,6 +2,7 @@
  * Created by YOU on 2018/5/31.
  */
 import * as React from 'react'
+import './css/NoteList.css'
 // import * as classNames from 'classnames'
 // import {omit} from 'lodash'
 

@@ -1,0 +1,16 @@
+ul.note-list {
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.note-item {
+  border-bottom: solid 1px #cecece;
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px 0;
+}
+
+.note-item image{
+  width: 100%;
+}

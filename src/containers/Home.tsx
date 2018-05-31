@@ -18,6 +18,7 @@ class Home extends React.Component<any, any> {
         author: 'Cigar',
         comments: 4,
         content: 'content',
+        image: 'https://upload-images.jianshu.io/upload_images/3459828-534caedceb295f8b.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240',
         like: 13,
         link: 'http://baidu.com',
         name: 'name',
