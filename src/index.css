@@ -1,9 +1,14 @@
-html, body, p, ul, li {
+html, body{
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   font-family: sans-serif;
+}
+
+ul, li, p{
+  margin: 0;
+  padding: 0;
 }
 
 a:focus, input:focus, button:focus {

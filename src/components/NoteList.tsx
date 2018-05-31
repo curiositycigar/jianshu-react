@@ -7,7 +7,7 @@ import './css/NoteList.css'
 // import {omit} from 'lodash'
 
 interface IItem {
-  name: string,
+  title: string,
   content: string,
   link: string,
   author: string,
@@ -21,7 +21,7 @@ class NoteList extends React.Component<any, any> {
   public static renderItem (data: IItem) {
     return (<li className="note-item">
       <div className="note-item-content">
-        <a href={data.link}>{data.name}</a>
+        <a className="note-title" href={data.link}>{data.title}</a>
         <p>{data.content}</p>
         <div className="note-meta">
           <a href={data.link + '#/comment'}><i className="iconfont icon-message_fill"/>{data.comments}</a>
@@ -29,7 +29,7 @@ class NoteList extends React.Component<any, any> {
           <span><i className="iconfont icon-redpacket_fill"/>{data.reword}</span>
         </div>
       </div>
-      <img src={data.image} />
+      <a className="imageWrapper" href={data.link}><img src={data.image} /></a>
     </li>)
   }
 

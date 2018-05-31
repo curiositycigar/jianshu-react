@@ -4,7 +4,7 @@ import {
   Switch,
   Route,
 } from 'react-router-dom'
-import NotFound from './components/NotFound'
+import NotFound from './containers/NotFound'
 import SignIn from './containers/SignIn'
 import SignUp from './containers/SignUp'
 import Home from './containers/Home'

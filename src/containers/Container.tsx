@@ -62,10 +62,10 @@ class Header extends React.Component<any, any> {
       <div className="main-container">
         <header className="main-header">
           <div className="main-header-content">
+            <h1>
+              <a href="/">LOGO</a>
+            </h1>
             <nav>
-              <h1>
-                <a href="/">LOGO</a>
-              </h1>
               <ul className="menu">
                 <li>
                   <NavLink exact={true} to="/"><i className="iconfont icon-int"/>发现</NavLink>
