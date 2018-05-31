@@ -3,12 +3,12 @@ import {
   HashRouter as Router,
   Switch,
   Route,
-  Redirect
 } from 'react-router-dom'
 import NotFound from './components/NotFound'
 import SignIn from './containers/SignIn'
 import SignUp from './containers/SignUp'
-import Index from './containers/Index'
+import Home from './containers/Home'
+import Article from './containers/Article'
 import "./App.css";
 
 class App extends React.Component<any, any> {
@@ -23,10 +23,10 @@ class App extends React.Component<any, any> {
     return (
       <Router>
         <Switch>
-          <Route path="/home" component={Index}/>
+          <Route path="/" exact={true} component={Home}/>
+          <Route path="/article/:id" component={Article}/>
           <Route path="/signin" component={SignIn}/>
           <Route path="/signup" component={SignUp}/>
-          <Redirect exact={true} from="/" to="/home"/>
           <Route path="*" component={NotFound}/>
         </Switch>
       </Router>

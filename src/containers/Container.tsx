@@ -2,9 +2,9 @@
  * Created by YOU on 2018/5/8.
  */
 import * as React from "react";
-import '../components/css/Container.css'
+import './css/Container.css'
 import {
-  Link,
+  NavLink,
 } from 'react-router-dom'
 import {
   connect
@@ -31,7 +31,6 @@ class Header extends React.Component<any, any> {
   public getUserField = (login: boolean) => {
     const {auth} = this.props
     if (login) {
-      console.log(auth)
       return <div>
         <span>{auth.data.name}</span>
         <a href="javascript:;" onClick={this.logout}>登出</a>
@@ -60,21 +59,41 @@ class Header extends React.Component<any, any> {
       auth,
     } = this.props
     return (
-      <div>
+      <div className="main-container">
         <header className="main-header">
           <div className="main-header-content">
             <nav>
               <h1>
                 <a href="/">LOGO</a>
               </h1>
-              <ul>
+              <ul className="menu">
                 <li>
-                  <Link className="active" to="/">首页</Link>
+                  <NavLink exact={true} to="/"><i className="iconfont icon-int"/>发现</NavLink>
                 </li>
                 <li>
-                  <Link to="/home/article/xhfftbsrugbv">菜单项</Link>
+                  <NavLink to="/attention"><i className="iconfont icon-addpeople_fill"/>关注</NavLink>
                 </li>
-                <li>
+                <li className="menu-own-submenu">
+                  <NavLink to="/message"><i className="iconfont icon-remind_fill"/>消息</NavLink>
+                  <ul className="submenu">
+                    <li>
+                      <NavLink to="/message/aaa"><i className="iconfont icon-message"/>评论</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/message/aaa"><i className="iconfont icon-mail"/>简信</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/message/aaa"><i className="iconfont icon-document"/>投稿请求</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/message/aaa"><i className="iconfont icon-like"/>喜欢和赞</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/message/aaa"><i className="iconfont icon-emoji"/>关注</NavLink>
+                    </li>
+                  </ul>
+                </li>
+                <li className="search">
                   <Search/>
                 </li>
               </ul>

@@ -45,7 +45,7 @@ class Search extends React.Component {
         disabled={disabled}
         value={this.state.value}
         onChange={this.handleChange}/>
-      <i className="icon icon-search search-icon"/>
+      <i className="iconfont icon-search search-icon"/>
         </span>)
   }
 }
