@@ -1,16 +1,17 @@
 import * as React from 'react'
+import './css/AuthorList.styl'
 
 interface IData {
-  name: string,
-  link: string,
   avatar: string,
-  words: number,
   like: number,
+  link: string,
+  name: string,
+  words: number,
 }
 
-class AuthorList extends React.Component {
-  public static renderItem(data: IData) {
-    return (<li>
+class AuthorList extends React.Component<any, any> {
+  public static renderItem(data: IData, key: number) {
+    return (<li key={key} className="author-item">
       <a href={data.link}>
         <img src={data.avatar} alt={data.name}/>
       </a>
@@ -31,7 +32,7 @@ class AuthorList extends React.Component {
 
   public render() {
     const {data} = this.props
-    return <ul>{data.map(item => AuthorList.renderItem(item))}</ul>
+    return <ul className="author-list">{data.map((item, index) => AuthorList.renderItem(item, index))}</ul>
   }
 }
 

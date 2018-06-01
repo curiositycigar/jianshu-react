@@ -107,6 +107,11 @@
 
 /* 登录注册链接 */
 
+.sign-in-field {
+  display: inline-block;
+  min-width: 110px;
+}
+
 .sign-in-field a {
   display: inline-block;
   color: black;

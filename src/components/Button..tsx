@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-class Button extends React.Component {
+class Button extends React.Component<any, any> {
   public props: any
 
   constructor(props: any) {

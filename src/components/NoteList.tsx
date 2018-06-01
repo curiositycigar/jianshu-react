@@ -18,8 +18,8 @@ interface IItem {
 }
 
 class NoteList extends React.Component<any, any> {
-  public static renderItem (data: IItem) {
-    return (<li className="note-item">
+  public static renderItem (data: IItem, key: number) {
+    return (<li key={key} className="note-item">
       <div className="note-item-content">
         <a className="note-title" href={data.link}>{data.title}</a>
         <p>{data.content}</p>
@@ -46,7 +46,7 @@ class NoteList extends React.Component<any, any> {
 
     return (
       <ul className="note-list">
-        {data.map(item => NoteList.renderItem(item))}
+        {data.map((item, index) => NoteList.renderItem(item, index))}
       </ul>
     )
   }
