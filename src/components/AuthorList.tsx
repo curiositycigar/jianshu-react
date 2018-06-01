@@ -15,9 +15,12 @@ class AuthorList extends React.Component<any, any> {
       <a href={data.link}>
         <img src={data.avatar} alt={data.name}/>
       </a>
-      <div>
+      <div className="author-item-content">
         <a href={data.link}>{data.name}</a>
         <span>写了{data.words}字·收获{data.like}喜欢</span>
+      </div>
+      <div className="author-item-buttons">
+        <a href="javascript:;"><i className="iconfont icon-add"/>关注</a>
       </div>
     </li>)
   }

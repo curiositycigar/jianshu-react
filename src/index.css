@@ -18,3 +18,7 @@ a:focus, input:focus, button:focus {
 ul {
   list-style: none;
 }
+
+ul, li, div, p, span, a{
+  box-sizing: border-box;
+}
