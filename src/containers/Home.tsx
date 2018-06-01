@@ -6,12 +6,17 @@ import Row from '../components/Row'
 import Container from './Container'
 import NoteList from '../components/NoteList'
 import AuthorList from '../components/AuthorList'
+import Tags from '../components/Tags'
 // import classNames = require('classnames')
 // import {omit} from 'lodash'
 
 class Home extends React.Component<any, any> {
   constructor (props: any) {
     super(props)
+  }
+
+  public refreshAuthors = () => {
+    console.log('refresh!!!', this.props)
   }
 
   public render () {
@@ -71,14 +76,62 @@ class Home extends React.Component<any, any> {
         words: 23145,
       },
     ]
+    const tags = [
+      {
+        image: 'https://upload.jianshu.io/collections/images/95/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64',
+        link: 'https://baidu.com',
+        name: '人文社科',
+      },
+      {
+        image: 'https://upload.jianshu.io/collections/images/95/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64',
+        link: 'https://baidu.com',
+        name: '故事',
+      },
+      {
+        image: 'https://upload.jianshu.io/collections/images/95/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64',
+        link: 'https://baidu.com',
+        name: '旅行·在路上',
+      },
+      {
+        image: 'https://upload.jianshu.io/collections/images/95/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64',
+        link: 'https://baidu.com',
+        name: '人文社科',
+      },
+      {
+        image: 'https://upload.jianshu.io/collections/images/95/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64',
+        link: 'https://baidu.com',
+        name: '故事',
+      },
+      {
+        image: 'https://upload.jianshu.io/collections/images/95/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64',
+        link: 'https://baidu.com',
+        name: '旅行·在路上',
+      },
+      {
+        image: 'https://upload.jianshu.io/collections/images/95/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64',
+        link: 'https://baidu.com',
+        name: '人文社科',
+      },
+      {
+        image: 'https://upload.jianshu.io/collections/images/95/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64',
+        link: 'https://baidu.com',
+        name: '故事',
+      },
+      {
+        image: 'https://upload.jianshu.io/collections/images/95/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64',
+        link: 'https://baidu.com',
+        name: '旅行·在路上',
+      },
+    ]
     return (
       <Container>
         <Row>
           <Row.Col span={16}>
+            <Tags data={tags} more="http://baidu.com"/>
             <NoteList data={data}/>
           </Row.Col>
           <Row.Col span={7} offset={1}>
-            <AuthorList data={authors}/>
+            <AuthorList data={authors} onRefresh={this.refreshAuthors} more="https://baidu.com"/>
           </Row.Col>
         </Row>
       </Container>

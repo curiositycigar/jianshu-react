@@ -9,6 +9,12 @@ interface IData {
   words: number,
 }
 
+interface IProps {
+  data: IData[],
+  onRefresh?: () => void,
+  more?: string
+}
+
 class AuthorList extends React.Component<any, any> {
   public static renderItem(data: IData, key: number) {
     return (<li key={key} className="author-item">
@@ -25,17 +31,26 @@ class AuthorList extends React.Component<any, any> {
     </li>)
   }
 
-  public props: {
-    data: IData[]
-  }
+  public props: IProps
 
   constructor(props: {}) {
     super(props)
   }
 
   public render() {
-    const {data} = this.props
-    return <ul className="author-list">{data.map((item, index) => AuthorList.renderItem(item, index))}</ul>
+    const {
+      data,
+      more,
+      onRefresh,
+    } = this.props
+    return <div>
+      {onRefresh ?
+        (<div className="author-list-header">
+          <span>推荐作者</span><a onClick={onRefresh} href="javascript:;"><i className="iconfont icon-refresh"/>换一批</a>
+        </div>) : {}}
+      <ul className="author-list">{data.map((item, index) => AuthorList.renderItem(item, index))}</ul>
+      {more ? <a className="author-list-more" href={more}>查看全部<i className="iconfont icon-enter"/></a> : {}}
+    </div>
   }
 }
 
