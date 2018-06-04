@@ -9,6 +9,7 @@ import SignIn from './containers/SignIn'
 import SignUp from './containers/SignUp'
 import Home from './containers/Home'
 import Article from './containers/Article'
+import Subjects from './containers/Subjects'
 import "./App.css";
 
 class App extends React.Component<any, any> {
@@ -25,6 +26,7 @@ class App extends React.Component<any, any> {
         <Switch>
           <Route path="/" exact={true} component={Home}/>
           <Route path="/article/:id" component={Article}/>
+          <Route path="/subjects" component={Subjects}/>
           <Route path="/signin" component={SignIn}/>
           <Route path="/signup" component={SignUp}/>
           <Route path="*" component={NotFound}/>

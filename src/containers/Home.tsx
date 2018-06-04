@@ -123,11 +123,12 @@ class Home extends React.Component<any, any> {
         name: '旅行·在路上',
       },
     ]
+
     return (
       <Container>
         <Row>
           <Row.Col span={16}>
-            <Tags data={tags} more="http://baidu.com"/>
+            <Tags data={tags} more="/subjects"/>
             <NoteList data={data}/>
           </Row.Col>
           <Row.Col span={7} offset={1}>

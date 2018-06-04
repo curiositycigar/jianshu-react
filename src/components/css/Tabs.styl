@@ -1,0 +1,39 @@
+.tabs
+  margin 5px
+  .tabs-nav
+    width 100%
+    border-bottom solid 1px #dedede
+    .tabs-nav-item
+      position relative
+      display inline-block
+      padding 14px 20px
+      text-align center
+      cursor pointer
+      color #969696
+      font-weight 600
+      &:after
+        content: ''
+        position absolute
+        left 50%
+        bottom: 0
+        width 0
+        height 2px
+        background #646464
+        transition all .3s
+      &:hover
+        color #646464
+        &:after
+          left 0
+          width 100%
+      &.active
+        color #646464
+        &:after
+          left 0
+          width 100%
+  .tabs-panels
+    width 100%
+    .tabs-panels-item
+      display none
+      padding 10px
+      &.active
+        display block

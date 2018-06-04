@@ -2,10 +2,16 @@ import * as React from 'react'
 import Col from './Col'
 import './css/Row.css'
 
-class Row extends React.Component {
+interface IRowProps{
+  children?: JSX.Element | string | Array<JSX.Element | string>
+}
+
+class Row extends React.Component<IRowProps, any> {
   public static Col: typeof Col
 
-  constructor(props: {}) {
+  public props: IRowProps
+
+  constructor(props: IRowProps) {
     super(props)
   }
 

@@ -18,8 +18,7 @@ import {
 } from '../actions'
 // import * as classNames from 'classnames'
 // import {omit} from 'lodash'
-
-class Header extends React.Component<any, any> {
+class Container extends React.Component<any, any> {
   public state = {
     active: '/'
   }
@@ -45,18 +44,21 @@ class Header extends React.Component<any, any> {
   }
 
   public login = () => {
+    const {dispatch} = this.props
     const name = 'lisa'
     const password = '123456'
-    this.props.dispatch(signIn(name, password))
+    dispatch(signIn(name, password))
   }
 
   public logout = () => {
-    this.props.dispatch(signOut())
+    const {dispatch} = this.props
+    dispatch(signOut())
   }
 
   public render () {
     const {
       auth,
+      children,
     } = this.props
     return (
       <div className="main-container">
@@ -101,8 +103,8 @@ class Header extends React.Component<any, any> {
             {this.getUserField(auth.login)}
           </div>
         </header>
-        <section>{this.props.children}</section>
-        <footer>this is footer</footer>
+        <section>{children}</section>
+        <footer style={{textAlign: 'center'}}>this is footer</footer>
       </div>
     )
   }
@@ -115,4 +117,4 @@ const select = (state: any) => {
   }
 }
 
-export default connect(select)(Header);
+export default connect(select)(Container);

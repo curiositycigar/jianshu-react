@@ -1,4 +1,7 @@
 import * as React from 'react'
+import {
+  Link,
+} from 'react-router-dom'
 import './css/Tags.styl'
 
 interface IData {
@@ -28,7 +31,7 @@ class Tags extends React.Component<any, any> {
     const {data, more} = this.props
     return <div className="tags">
       {data.map((item, index) => Tags.renderItem(item, index))}
-      {more ? <a className="tags-more" href={more}>查看更多专题<i className='iconfont icon-enter'/></a> : {}}
+      {more ? <Link className="tags-more" to={more}>查看更多专题<i className='iconfont icon-enter'/></Link> : {}}
     </div>
   }
 }
