@@ -12,6 +12,8 @@ import Button from '../components/Button'
 // import * as classNames from 'classnames'
 // import {omit} from 'lodash'
 
+import './css/Subjects.styl'
+
 class Subject extends React.Component<{}, any> {
   constructor (props: {}) {
     super(props)
@@ -26,15 +28,17 @@ class Subject extends React.Component<{}, any> {
             <Row>
               <Row.Col span={8}>
                 <Card
+                  className="author-card"
                   icon="https://upload.jianshu.io/users/upload_avatars/5796592/73837104-47e5-4fe9-a5be-054bd50b06f7.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180"
-                  head={<div>
+                  iconRound={true}
+                  head={<div className="author-card-head">
                     <a href="baidu.com"><h4>简书出版</h4></a>
-                    <p style={{padding: '5px 20px'}}>给我发简信前请先看完我的简介。如何开...</p>
+                    <p>给我发简信前请先看完我的简介。如何开...</p>
                     <Button><i className="iconfont icon-add"/>关注</Button>
                   </div>}
                   bodyTitle="最近更新">
-                  <div style={{width: '100%', textAlign: 'left'}}>
-                    <a target="_blank" href="baidu.com">最美诗歌音频 | 想把诗念给你听 征文活动开启~</a>
+                  <div className="author-card-body">
+                    <a target="_blank" href="baidu.com">最美诗歌音频</a>
                     <a target="_blank" href="baidu.com">出版社会死，出版业会长存——版权中心总裁演讲</a>
                     <a target="_blank" href="baidu.com">【职场小说·匠人精神·行业故事】征文获奖情况公布</a>
                   </div>
@@ -42,15 +46,17 @@ class Subject extends React.Component<{}, any> {
               </Row.Col>
               <Row.Col span={8}>
                 <Card
+                  className="author-card"
                   icon="https://upload.jianshu.io/users/upload_avatars/5796592/73837104-47e5-4fe9-a5be-054bd50b06f7.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180"
-                  head={<div>
+                  iconRound={true}
+                  head={<div className="author-card-head">
                     <a href="baidu.com"><h4>简书出版</h4></a>
-                    <p style={{padding: '5px 20px'}}>给我发简信前请先看完我的简介。如何开...</p>
+                    <p>给我发简信前请先看完我的简介。如何开...</p>
                     <Button><i className="iconfont icon-add"/>关注</Button>
                   </div>}
                   bodyTitle="最近更新">
-                  <div style={{width: '100%', textAlign: 'left'}}>
-                    <a target="_blank" href="baidu.com">最美诗歌音频 | 想把诗念给你听 征文活动开启~</a>
+                  <div className="author-card-body">
+                    <a target="_blank" href="baidu.com">最美诗歌音频</a>
                     <a target="_blank" href="baidu.com">出版社会死，出版业会长存——版权中心总裁演讲</a>
                     <a target="_blank" href="baidu.com">【职场小说·匠人精神·行业故事】征文获奖情况公布</a>
                   </div>
@@ -58,15 +64,17 @@ class Subject extends React.Component<{}, any> {
               </Row.Col>
               <Row.Col span={8}>
                 <Card
+                  className="author-card"
                   icon="https://upload.jianshu.io/users/upload_avatars/5796592/73837104-47e5-4fe9-a5be-054bd50b06f7.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180"
-                  head={<div>
+                  iconRound={true}
+                  head={<div className="author-card-head">
                     <a href="baidu.com"><h4>简书出版</h4></a>
-                    <p style={{padding: '5px 20px'}}>给我发简信前请先看完我的简介。如何开...</p>
+                    <p>给我发简信前请先看完我的简介。如何开...</p>
                     <Button><i className="iconfont icon-add"/>关注</Button>
                   </div>}
                   bodyTitle="最近更新">
-                  <div style={{width: '100%', textAlign: 'left'}}>
-                    <a target="_blank" href="baidu.com">最美诗歌音频 | 想把诗念给你听 征文活动开启~</a>
+                  <div className="author-card-body">
+                    <a target="_blank" href="baidu.com">最美诗歌音频</a>
                     <a target="_blank" href="baidu.com">出版社会死，出版业会长存——版权中心总裁演讲</a>
                     <a target="_blank" href="baidu.com">【职场小说·匠人精神·行业故事】征文获奖情况公布</a>
                   </div>

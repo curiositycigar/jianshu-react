@@ -4,6 +4,7 @@ interface IProps {
   span: number,
   offset?: number,
   children?: any,
+  gutter?: number,
 }
 
 class Col extends React.Component {
@@ -13,11 +14,11 @@ class Col extends React.Component {
 
   public props: IProps
 
-  constructor(props: IProps) {
+  constructor (props: IProps) {
     super(props)
   }
 
-  public render() {
+  public render () {
     const {
       span,
       offset,
