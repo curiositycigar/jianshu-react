@@ -25,14 +25,14 @@ class Subject extends React.Component<{}, any> {
       <Container>
         <Tabs defaultTab="1">
           <TabItem tab={<span><i className="iconfont icon-label_fill"/>推荐</span>} name="1">
-            <Row>
+            <Row gutter={40}>
               <Row.Col span={8}>
                 <Card
                   className="author-card"
                   icon="https://upload.jianshu.io/users/upload_avatars/5796592/73837104-47e5-4fe9-a5be-054bd50b06f7.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180"
                   iconRound={true}
                   head={<div className="author-card-head">
-                    <a href="baidu.com"><h4>简书出版</h4></a>
+                    <a href="baidu.com"><h4>简书出版1</h4></a>
                     <p>给我发简信前请先看完我的简介。如何开...</p>
                     <Button><i className="iconfont icon-add"/>关注</Button>
                   </div>}
@@ -50,9 +50,9 @@ class Subject extends React.Component<{}, any> {
                   icon="https://upload.jianshu.io/users/upload_avatars/5796592/73837104-47e5-4fe9-a5be-054bd50b06f7.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180"
                   iconRound={true}
                   head={<div className="author-card-head">
-                    <a href="baidu.com"><h4>简书出版</h4></a>
+                    <a href="baidu.com"><h4>简书出版2</h4></a>
                     <p>给我发简信前请先看完我的简介。如何开...</p>
-                    <Button><i className="iconfont icon-add"/>关注</Button>
+                    <Button type="transparent"><i className="iconfont icon-add"/>关注</Button>
                   </div>}
                   bodyTitle="最近更新">
                   <div className="author-card-body">
@@ -68,9 +68,9 @@ class Subject extends React.Component<{}, any> {
                   icon="https://upload.jianshu.io/users/upload_avatars/5796592/73837104-47e5-4fe9-a5be-054bd50b06f7.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180"
                   iconRound={true}
                   head={<div className="author-card-head">
-                    <a href="baidu.com"><h4>简书出版</h4></a>
+                    <a href="baidu.com"><h4>简书出版3</h4></a>
                     <p>给我发简信前请先看完我的简介。如何开...</p>
-                    <Button><i className="iconfont icon-add"/>关注</Button>
+                    <Button href="https://baidu.com"><i className="iconfont icon-add"/>关注</Button>
                   </div>}
                   bodyTitle="最近更新">
                   <div className="author-card-body">

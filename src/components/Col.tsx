@@ -1,27 +1,30 @@
 import * as React from 'react'
+import {CSSProperties} from "react";
 
 interface IProps {
   span: number,
   offset?: number,
   children?: any,
-  gutter?: number,
+  style?: CSSProperties,
 }
 
 class Col extends React.Component {
   public static defaultProps = {
-    offset: 0
+    offset: 0,
+    padding: 0,
   }
 
   public props: IProps
 
-  constructor (props: IProps) {
+  constructor(props: IProps) {
     super(props)
   }
 
-  public render () {
+  public render() {
     const {
       span,
       offset,
+      style,
     } = this.props
 
     const marginLeft = offset ? offset * 100 / 24 + '%' : 0
@@ -34,6 +37,7 @@ class Col extends React.Component {
                 style={{
                   marginLeft,
                   width: span * 100 / 24 + '%',
+                  ...style,
                 }}>{this.props.children}</div>
   }
 }

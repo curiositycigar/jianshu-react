@@ -3,12 +3,18 @@
   border: solid 1px #cccccc
   border-radius 20px
   color #969696
+  display inline-block
   font-size 16px
   height: 40px
   line-height 38px
   padding: 0 15px
   text-align center
   cursor pointer
+  &[disabled], &[disabled]:hover, &[disabled]:active, &[disabled]:focus, &.disabled, &.disabled:hover, &.disabled:active, &.disabled:focus
+    background #efefef !important
+    color #888888 !important
+    cursor not-allowed !important
+    border solid 1px #c7c7c7 !important
   &.btn-primary
     color: #fff
     background #42c02e
@@ -21,10 +27,18 @@
     border-color #000
     &:hover
       background #000
-  &.btn-light
+  &.btn-transparent
     color: #969696
-    background #f7f7f7
+    background transparent
     border-color #c7c7c7
     &:hover
-      background #f0f0f0
+      background rgba(0, 0, 0, 0.05)
       border-color #969696
+  &.btn-light
+    color: #ea6f5a
+    background #ffffff
+    border-color rgba(236, 97, 73, .7)
+    &:hover
+      background #f0f0f0
+      border-color #ec6149
+      color #ec6149

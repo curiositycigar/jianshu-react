@@ -5,27 +5,61 @@ import {CSSProperties} from "react";
 
 interface IButtonProps {
   children: string | JSX.Element | Array<JSX.Element | string>
-  onClick?: () => void,
-  type?: 'primary' | 'dark' | 'light',
+  onClick?: (e: Event) => void,
+  type?: 'primary' | 'dark' | 'light' | 'transparent',
   style?: CSSProperties,
+  href?: string,
+  disabled?: boolean,
 }
 
 class Button extends React.Component<IButtonProps, any> {
   public static defaultProps = {
-    type: 'primary'
+    disabled: false,
+    type: 'primary',
   }
 
   public props: IButtonProps
 
-  constructor (props: IButtonProps) {
+  constructor(props: IButtonProps) {
     super(props)
   }
 
-  public render () {
-    const {type, style} = this.props
+  public handleClick = (e: any, disabled?: boolean) => {
+    const {onClick} = this.props
 
-    return <button style={style} className={classNames(['btn', 'btn-' + type])}
-                   onClick={this.props.onClick}>{this.props.children}</button>
+    if (onClick && !disabled) {
+      onClick(e)
+    }
+  }
+
+  public render() {
+    const {
+      type,
+      style,
+      href,
+      disabled,
+    } = this.props
+
+    return (
+      href ?
+        <a
+          style={style}
+          className={classNames(['btn', 'btn-' + type, {disabled}])}
+          href={disabled ? undefined :href}
+          onClick={(e) => {
+            this.handleClick(e)
+          }}>{this.props.children}
+        </a>
+        :
+        <button
+          style={style}
+          disabled={disabled}
+          className={classNames(['btn', 'btn-' + type])}
+          onClick={(e) => {
+            this.handleClick(e, disabled)
+          }}>{this.props.children}
+        </button>
+    )
   }
 }
 

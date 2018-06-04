@@ -40,7 +40,7 @@ class Home extends React.Component<any, any> {
         like: 13,
         link: 'http://baidu.com',
         reword: 1,
-        title: '越来越多的内容产品或社区在运用内容算法推荐系统，想让你的文章和内容被更多人看到',
+        title: '越来越多的内容产品或社区在运用内容算法推荐系统',
       },
       {
         author: 'Cigar',
