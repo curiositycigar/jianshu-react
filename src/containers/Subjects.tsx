@@ -8,6 +8,7 @@ import Tabs from '../components/Tabs'
 import TabItem from '../components/Tabs/TabItem'
 import Card from '../components/Card'
 import Button from '../components/Button'
+import Input from '../components/Input'
 // import * as propTypes from 'prop-types'
 // import * as classNames from 'classnames'
 // import {omit} from 'lodash'
@@ -98,7 +99,7 @@ class Subject extends React.Component<{}, any> {
           </TabItem>
           <TabItem tab={<span><i className="iconfont icon-coordinates_fill"/>城市</span>} name="3">
             <div>3</div>
-            <div>3</div>
+            <div><Input/></div>
           </TabItem>
           <TabItem tab={<span><i className="iconfont icon-shop_fill"/>校园</span>} name="4">
             4

@@ -19,6 +19,6 @@ ul {
   list-style: none;
 }
 
-ul, li, div, p, span, a{
+ul, li, div, p, span, a, input, textarea{
   box-sizing: border-box;
 }
