@@ -26,7 +26,7 @@ class Subject extends React.Component<{}, any> {
         <Tabs defaultTab="1">
           <TabItem tab={<span><i className="iconfont icon-label_fill"/>推荐</span>} name="1">
             <Row gutter={40}>
-              <Row.Col span={8}>
+              <Row.Col span={{span: 8, xs: 24}}>
                 <Card
                   className="author-card"
                   icon="https://upload.jianshu.io/users/upload_avatars/5796592/73837104-47e5-4fe9-a5be-054bd50b06f7.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180"
@@ -44,7 +44,7 @@ class Subject extends React.Component<{}, any> {
                   </div>
                 </Card>
               </Row.Col>
-              <Row.Col span={8}>
+              <Row.Col span={{span: 8, xs: 24}}>
                 <Card
                   className="author-card"
                   icon="https://upload.jianshu.io/users/upload_avatars/5796592/73837104-47e5-4fe9-a5be-054bd50b06f7.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180"
@@ -62,7 +62,7 @@ class Subject extends React.Component<{}, any> {
                   </div>
                 </Card>
               </Row.Col>
-              <Row.Col span={8}>
+              <Row.Col span={8} xs={24}>
                 <Card
                   className="author-card"
                   icon="https://upload.jianshu.io/users/upload_avatars/5796592/73837104-47e5-4fe9-a5be-054bd50b06f7.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180"
