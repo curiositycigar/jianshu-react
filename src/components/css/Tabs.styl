@@ -1,9 +1,9 @@
-.tabs
+.tabs.tabs-default
   margin 5px
-  .tabs-nav
+  >.tabs-nav
     width 100%
     border-bottom solid 1px #dedede
-    .tabs-nav-item
+    >.tabs-nav-item
       position relative
       display inline-block
       padding 14px 20px
@@ -12,6 +12,8 @@
       color #969696
       font-weight 600
       font-size 15px
+      .iconfont
+        padding-right: 5px
       &:after
         content: ''
         position absolute
@@ -31,9 +33,48 @@
         &:after
           left 0
           width 100%
-  .tabs-panels
+  >.tabs-panels
     width 100%
-    .tabs-panels-item
+    >.tabs-panels-item
+      display none
+      padding 10px
+      &.active
+        display block
+
+.tabs.tabs-side
+  display flex
+  width: 100%
+  margin 5px
+  background: #fff
+  >.tabs-nav
+    width: 150px
+    min-height: 100%
+    border-right 1px solid #dedede
+    >.tabs-nav-item
+      position relative
+      display inline-block
+      width: 100%
+      padding 14px 20px
+      text-align left
+      cursor pointer
+      color #333
+      font-size 15px
+      &.text-left
+        text-align left
+      &.text-center
+        text-align center
+      &.text-right
+        text-align right
+      .iconfont
+        padding-right: 5px
+      &:hover
+        background #f0f0f0
+      &.active
+        background #f0f0f0
+  >.tabs-panels
+    min-height: 100%
+    flex 1
+    >.tabs-panels-item
       display none
       padding 10px
       &.active

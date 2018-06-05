@@ -5,16 +5,22 @@ import '../css/Tabs.styl'
 interface IProps {
   children: JSX.Element[],
   defaultTab?: string | number,
-  onTabClick?: (name: string | number) => void
+  onTabClick?: (name: string | number) => void,
+  side?: boolean,
+  tabAlign?: 'left' | 'center' | 'right'
 }
 
 class Tabs extends React.Component<IProps, any> {
+  public static defaultProps = {
+    tabAlign: 'left',
+  }
+
   public props: IProps
 
   public state: {
-    currentTab: string | number
+    currentTab: string | number,
   } = {
-    currentTab: 0
+    currentTab: 0,
   }
 
   constructor (props: IProps) {
@@ -25,7 +31,7 @@ class Tabs extends React.Component<IProps, any> {
 
   public handleTabClick = (name: string | number, item: JSX.Element, e: any) => {
     this.setState({
-      currentTab: name
+      currentTab: name,
     })
 
     const {onTabClick} = this.props
@@ -36,14 +42,14 @@ class Tabs extends React.Component<IProps, any> {
   }
 
   public render () {
-    const {children} = this.props
+    const {children, side, tabAlign} = this.props
     const {currentTab} = this.state
 
-    return (<div className="tabs">
+    return (<div className={classNames(["tabs", {"tabs-side": side, 'tabs-default': !side}])}>
       <ul className="tabs-nav">
         {children.map((item, index) => (<li
           onClick={(e) => this.handleTabClick(item.props.name || index, item, e)}
-          className={classNames(['tabs-nav-item', {'active': index === currentTab || item.props.name === currentTab}])}
+          className={classNames(['tabs-nav-item', 'text-' + tabAlign, {'active': index === currentTab || item.props.name === currentTab}])}
           key={index}>
           {item.props.tab}
         </li>))}
