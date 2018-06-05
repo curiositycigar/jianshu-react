@@ -83,7 +83,18 @@ class Subject extends React.Component<{}, any> {
             </Row>
           </TabItem>
           <TabItem tab={<span><i className="iconfont icon-like_fill"/>热门</span>} name="2">
-            <div>2</div>
+            <Tabs defaultTab="2" side={true}>
+              <TabItem tab={<span><i className="iconfont icon-like_fill"/>热门</span>} name="2">
+                <div>2</div>
+              </TabItem>
+              <TabItem tab={<span><i className="iconfont icon-coordinates_fill"/>城市</span>} name="3">
+                <div>3</div>
+                <div>3</div>
+              </TabItem>
+              <TabItem tab={<span><i className="iconfont icon-shop_fill"/>校园</span>} name="4">
+                4<br/>4<br/>4<br/>4<br/>4<br/>4<br/>4<br/>4<br/>4<br/>4<br/>4<br/>4<br/>4<br/>4<br/>4<br/>4<br/>4<br/>4<br/>4<br/>4<br/>4<br/>4<br/>4<br/>4<br/>
+              </TabItem>
+            </Tabs>
           </TabItem>
           <TabItem tab={<span><i className="iconfont icon-coordinates_fill"/>城市</span>} name="3">
             <div>3</div>
