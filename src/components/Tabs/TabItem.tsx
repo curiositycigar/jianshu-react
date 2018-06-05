@@ -3,10 +3,12 @@
  */
 import * as React from 'react'
 
+type ChildElements = JSX.Element | Array<JSX.Element | string> | string
+
 interface IProps{
-  children: JSX.Element | JSX.Element[] | string,
+  children: ChildElements
   name?: string,
-  tab: string | JSX.Element,
+  tab: ChildElements,
 }
 
 class TabItem extends React.Component<IProps, any> {
