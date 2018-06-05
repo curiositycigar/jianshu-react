@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Col from './Col'
-import './css/Row.css'
+import './css/Row.styl'
 import {cloneElement, Children} from "react";
 
 interface IRowProps {
@@ -27,7 +27,7 @@ class Row extends React.Component<IRowProps, any> {
         return null
       }
       if (col.props && halfGutter && halfGutter > 0) {
-        return cloneElement(col, {
+        return cloneElement(col as any, {
           style: {
             paddingLeft: halfGutter,
             paddingRight: halfGutter,
