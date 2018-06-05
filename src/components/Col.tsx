@@ -2,6 +2,17 @@ import * as React from 'react'
 import * as classNames from 'classnames'
 import {CSSProperties} from "react";
 
+/*
+
+xs <576
+sm ≥576
+md ≥768
+lg ≥992
+xl ≥1200
+xxl ≥1600
+
+ */
+
 interface IProps {
   span: number,
   offset?: number,
