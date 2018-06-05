@@ -1,4 +1,5 @@
 import * as React from 'react'
+import * as classNames from 'classnames'
 import {CSSProperties} from "react";
 
 interface IProps {
@@ -33,10 +34,9 @@ class Col extends React.Component {
       throw new Error('The number of span prop must between 1 and 24!')
     }
 
-    return <div className='span'
+    return <div className={classNames(['span', 'span-' + span])}
                 style={{
                   marginLeft,
-                  width: span * 100 / 24 + '%',
                   ...style,
                 }}>{this.props.children}</div>
   }
