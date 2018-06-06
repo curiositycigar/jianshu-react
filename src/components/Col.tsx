@@ -3,32 +3,27 @@ import * as classNames from 'classnames'
 import {CSSProperties} from "react";
 
 /*
-
-xs <576
-sm ≥576
-md ≥768
-lg ≥992
-xl ≥1200
-xxl ≥1600
+ ant-d
+ xs <576
+ sm ≥576
+ md ≥768
+ lg ≥992
+ xl ≥1200
+ xxl ≥1600
 
  */
 
-interface IProps {
-  span: number | {
-    span: number,
-    xs?: number,
-    sm?: number,
-    md?: number,
-    lg?: number,
-    xl?: number,
-    xxl?: number,
-  },
+interface ISPan {
   xs?: number,
   sm?: number,
   md?: number,
   lg?: number,
   xl?: number,
   xxl?: number,
+}
+
+interface IProps extends ISPan {
+  span: number | ISPan & {span: number},
   offset?: number,
   children?: any,
   style?: CSSProperties,
@@ -42,11 +37,11 @@ class Col extends React.Component {
 
   public props: IProps
 
-  constructor(props: IProps) {
+  constructor (props: IProps) {
     super(props)
   }
 
-  public render() {
+  public render () {
     const {
       offset,
       style,
