@@ -9,6 +9,7 @@ import TabItem from '../components/Tabs/TabItem'
 import Card from '../components/Card'
 import Button from '../components/Button'
 import Input from '../components/Input'
+import Icon from '../components/Icon'
 // import * as propTypes from 'prop-types'
 // import * as classNames from 'classnames'
 // import {omit} from 'lodash'
@@ -16,6 +17,10 @@ import Input from '../components/Input'
 import './css/Subjects.styl'
 
 class Subject extends React.Component<{}, any> {
+  public state = {
+    value: '123'
+  }
+
   constructor (props: {}) {
     super(props)
   }
@@ -82,6 +87,73 @@ class Subject extends React.Component<{}, any> {
                 </Card>
               </Row.Col>
             </Row>
+            <Input
+              value="123123"
+              width="500px"
+              addonBefore={<i className="iconfont icon-mine_fill"/>}
+              addonAfter={<i className="iconfont icon-manage_fill"/>}
+              round={true}
+            />
+            <br/>
+            <br/>
+            <Input
+              value="123123"
+              width="500px"
+              addonBefore="before"
+              round={true}
+            />
+            <br/>
+            <br/>
+            <Input
+              value="123123"
+              width="500px"
+              addonAfter="after"
+              round={true}
+            />
+            <br/>
+            <br/>
+            <Input
+              value="123123"
+              width="500px"
+              addonBefore="before"
+              preffix={<i className="iconfont icon-mine_fill"/>}
+              round={true}
+            />
+            <br/>
+            <br/>
+            <Input
+              value="123123"
+              width="500px"
+              addonAfter="after"
+              preffix={<i className="iconfont icon-mine_fill"/>}
+              round={true}
+            />
+            <br/>
+            <br/>
+            <Input
+              width="500px"
+              value={this.state.value}
+              round={true}
+              onChange={(value) => {this.setState({value})}}
+              preffix={<i className="iconfont icon-mine_fill"/>}
+              suffix={<Icon action={true} type="delete_fill"/>}
+            />
+            <br/>
+            <br/>
+            <Input
+              width="500px"
+              round={true}
+              defaultValue="456456"
+              suffix={<i className="iconfont icon-mine_fill"/>}
+            />
+            <br/>
+            <br/>
+            <Input
+              width="500px"
+              round={true}
+              defaultValue="456456"
+            />
+            <br/>
           </TabItem>
           <TabItem tab={<span><i className="iconfont icon-like_fill"/>热门</span>} name="2">
             <Tabs defaultTab="2" side={true}>
