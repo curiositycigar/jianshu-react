@@ -1,8 +1,98 @@
-input.input
-  background #fff
-  border 1px solid #c8c8c8
+InputHeight = 40px
+InputLineHeight = InputHeight - 2px
+InputRadius = InputHeight / 2
+InputBorderColor = #d9d9d9
+InputHoverBorderColor = #ea6f5a
+DisabledColor = #c8c8c8
+
+input[type=text],input[type=password]
+  &.input
+    background #fff
+    padding 5px 10px
+    height InputHeight
+    transition all .3s
+    font-size 14px
+    vertical-align top
+    &.round
+      border-radius InputRadius
+    &:hover, &:focus
+      border 1px solid InputHoverBorderColor
+    &:focus
+      box-shadow 0 0 3px 0 InputHoverBorderColor
+    &[disabled]
+      border 1px solid DisabledColor
+      color DisabledColor
+      cursor not-allowed
+
+.input
+  border 1px solid InputBorderColor
   border-radius 5px
-  padding 5px 10px
-  height 40px
-  &:hover, &:focus
-    border 1px solid #969696
+  width 100%
+
+.input-affix-wrapper
+  display inline-block
+  position relative
+  &:hover
+    .input
+      border 1px solid InputHoverBorderColor
+  &.input-affix-disabled
+    cursor not-allowed
+    color DisabledColor
+  .input-affix
+    position absolute
+    top 0
+    padding: 0 10px
+    width: 40px
+    text-align center
+    height: InputHeight
+    line-height: InputHeight
+    &.input-prefix
+      left 0
+      &~.input
+        padding-left 40px
+    &.input-suffix
+      right 0
+      &~.input
+        padding-right 40px
+
+.input-wrapper
+  display table
+  vertical-align top
+  &:hover
+    .input
+      border 1px solid InputHoverBorderColor
+  >.input, >.input-affix-wrapper, >.input-addon
+    display table-cell
+  >.input, >.input-affix-wrapper
+    width 100%
+  .input
+    border-radius 0
+  >span
+    display inline-block
+    vertical-align top
+  .input-addon
+    width: 1px
+    height InputHeight
+    line-height InputLineHeight
+    padding: 0 10px
+    border 1px solid InputBorderColor
+    text-align center
+  .input-addon-before
+    border-right none
+    border-radius 5px 0 0 5px
+  .input-addon-after
+    border-left none
+    border-radius 0 5px 5px 0
+  >.input:first-child, >.input-affix-wrapper:first-child .input
+    border-radius 5px 0 0 5px
+  >.input:last-child, >.input-affix-wrapper:last-child .input
+    border-radius 0 5px 5px 0
+  &.round
+    .input-addon-before
+      border-radius InputRadius 0 0 InputRadius
+    .input-addon-after
+      border-radius 0 InputRadius InputRadius 0
+    >.input:first-child, >.input-affix-wrapper:first-child .input
+      border-radius InputRadius 0 0 InputRadius
+    >.input:last-child, >.input-affix-wrapper:last-child .input
+      border-radius 0 InputRadius InputRadius 0
