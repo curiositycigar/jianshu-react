@@ -1,12 +1,16 @@
+BtnHeight = 40px
+BtnLineHeight = BtnHeight - 2px
+BtnFontSize = 16px
+
 .btn
   background #fff
   border: solid 1px #cccccc
   border-radius 20px
   color #969696
   display inline-block
-  font-size 16px
-  height: 40px
-  line-height 38px
+  font-size BtnFontSize
+  height: BtnHeight
+  line-height BtnLineHeight
   padding: 0 15px
   text-align center
   cursor pointer
@@ -19,18 +23,24 @@
     color: #fff
     background #42c02e
     border-color #42c02e
+    .iconfont
+      color #fff
     &:hover
       background #3db922
   &.btn-dark
     color: #fff
     background #343434
     border-color #000
+    .iconfont
+      color #fff
     &:hover
       background #000
   &.btn-transparent
     color: #969696
     background transparent
     border-color #c7c7c7
+    .iconfont
+      color #969696
     &:hover
       background rgba(0, 0, 0, 0.05)
       border-color #969696
@@ -38,6 +48,8 @@
     color: #ea6f5a
     background #ffffff
     border-color rgba(236, 97, 73, .7)
+    .iconfont
+      color #ea6f5a
     &:hover
       background #f0f0f0
       border-color #ec6149
