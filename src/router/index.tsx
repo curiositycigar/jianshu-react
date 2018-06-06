@@ -3,14 +3,9 @@
  */
 import * as React from 'react'
 
-class RouterProvider extends React.Component {
-  constructor (props: any, context: any) {
-    super(props, context)
-  }
+const {Provider, Consumer} = React.createContext({
+  name: '123',
+  level: 1,
+})
 
-  public render () {
-    return <div/>
-  }
-}
-
-export default RouterProvider
+export {Provider, Consumer}
