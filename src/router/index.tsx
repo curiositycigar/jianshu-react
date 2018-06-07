@@ -3,7 +3,7 @@
  */
 import * as React from 'react'
 
-const {Provider, Consumer} = React.createContext({
+const {Provider, Consumer} = React.createContext<{name: string, level: number}>({
   name: '123',
   level: 1,
 })
