@@ -87,7 +87,7 @@ class Subject extends React.Component<{}, any> {
                 </Card>
               </Row.Col>
             </Row>
-            <Input.Group direction='col'>
+            <Input.Group>
               <Input
                 value="123123"
                 width="300px"
@@ -128,7 +128,7 @@ class Subject extends React.Component<{}, any> {
             />
             <br/>
             <br/>
-            <Input.Group direction='col'>
+            <Input.Group>
               <Input
                 value="123123"
                 width="300px"
@@ -164,29 +164,26 @@ class Subject extends React.Component<{}, any> {
             />
             <br/>
             <br/>
-            <Input.Group direction='col'>
+            <Input.Group>
               <Input
                 width="300px"
-                round={true}
                 defaultValue="456456"
-                suffix={<i className="iconfont icon-mine_fill"/>}
+                preffix={<i className="iconfont icon-mine_fill"/>}
               />
               <Input
                 width="300px"
-                round={true}
                 defaultValue="456456"
-                suffix={<i className="iconfont icon-mine_fill"/>}
+                preffix={<i className="iconfont icon-mobilephone_fill"/>}
               />
               <Input
                 width="300px"
-                round={true}
                 defaultValue="456456"
-                suffix={<i className="iconfont icon-mine_fill"/>}
+                preffix={<i className="iconfont icon-lock_fill"/>}
               />
             </Input.Group>
             <br/>
             <br/>
-            <Input.Group direction='col'>
+            <Input.Group>
               <Input
                 width="300px"
                 round={true}
