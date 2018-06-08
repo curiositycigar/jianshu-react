@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as classNames from 'classnames'
+import InputGroup from './InputGroup'
 import './css/Input.styl'
 
 type IAddOn = JSX.Element | string
@@ -23,6 +24,8 @@ interface IProps {
 }
 
 class Input extends React.Component<IProps, any> {
+  public static Group = InputGroup
+
   public static defaultProps = {
     disabled: false,
     round: false,
