@@ -167,15 +167,16 @@ class Subject extends React.Component<{}, any> {
             <Input.Group>
               <Input
                 width="300px"
-                defaultValue="456456"
+                defaultValue="LitCigar"
                 preffix={<i className="iconfont icon-mine_fill"/>}
               />
               <Input
                 width="300px"
-                defaultValue="456456"
-                preffix={<i className="iconfont icon-mobilephone_fill"/>}
+                defaultValue="litcigar@163.com"
+                preffix={<i className="iconfont icon-mail_fill"/>}
               />
               <Input
+                type="password"
                 width="300px"
                 defaultValue="456456"
                 preffix={<i className="iconfont icon-lock_fill"/>}
