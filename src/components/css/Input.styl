@@ -146,7 +146,6 @@ input[type=text],input[type=password]
         >.input:last-child, >.input-affix-wrapper:last-child .input
           border-radius 0 0 5px 0
     >.input-wrapper.round
-      display table
       &:first-child
         .input-addon-before
           border-right none
@@ -169,3 +168,68 @@ input[type=text],input[type=password]
           border-radius 0 0 0 InputRadius
         >.input:last-child, >.input-affix-wrapper:last-child .input
           border-radius 0 0 InputRadius 0
+  &.input-group-col
+    >.input:first-child
+      border-radius 5px 0 0 5px
+      &.round
+        border-radius InputRadius 0 0 InputRadius
+    >.input:last-child
+      border-radius 0 5px 5px 0
+      &.round
+        border-radius 0 InputRadius InputRadius 0
+    >.input-affix-wrapper
+      &:first-child .input
+        border-radius 5px 0 0 5px
+        &.round
+          border-radius InputRadius 0 0 InputRadius
+      &:last-child .input
+        border-radius 0 5px 5px 0
+        &.round
+          border-radius 0 InputRadius InputRadius 0
+    >.input-wrapper
+      display inline-table
+      &:first-child
+        .input-addon-before
+          border-right none
+          border-radius 5px 0 0 5px
+        .input-addon-after
+          border-left none
+          border-radius 0
+        >.input:first-child, >.input-affix-wrapper:first-child .input
+          border-radius 5px 0 0 5px
+        >.input:last-child, >.input-affix-wrapper:last-child .input
+          border-radius 0
+      &:last-child
+        .input-addon-before
+          border-right none
+          border-radius 0
+        .input-addon-after
+          border-left none
+          border-radius 0 5px 5px 0
+        >.input:first-child, >.input-affix-wrapper:first-child .input
+          border-radius 0
+        >.input:last-child, >.input-affix-wrapper:last-child .input
+          border-radius 0 5px 5px 0
+    >.input-wrapper.round
+      &:first-child
+        .input-addon-before
+          border-right none
+          border-radius InputRadius 0 0 InputRadius
+        .input-addon-after
+          border-left none
+          border-radius 0
+        >.input:first-child, >.input-affix-wrapper:first-child .input
+          border-radius InputRadius 0 0 InputRadius
+        >.input:last-child, >.input-affix-wrapper:last-child .input
+          border-radius 0
+      &:last-child
+        .input-addon-before
+          border-right none
+          border-radius 0
+        .input-addon-after
+          border-left none
+          border-radius 0 InputRadius InputRadius 0
+        >.input:first-child, >.input-affix-wrapper:first-child .input
+          border-radius 0
+        >.input:last-child, >.input-affix-wrapper:last-child .input
+          border-radius 0 InputRadius InputRadius 0
