@@ -98,6 +98,13 @@ class Subject extends React.Component<{}, any> {
               <Input
                 value="123123"
                 width="300px"
+                addonBefore={<i className="iconfont icon-mine_fill"/>}
+                addonAfter={<i className="iconfont icon-manage_fill"/>}
+                round={true}
+              />
+              <Input
+                value="123123"
+                width="300px"
                 addonBefore="before"
                 round={true}
               />
@@ -122,6 +129,13 @@ class Subject extends React.Component<{}, any> {
             <br/>
             <br/>
             <Input.Group direction='col'>
+              <Input
+                value="123123"
+                width="300px"
+                addonAfter="after"
+                preffix={<i className="iconfont icon-mine_fill"/>}
+                round={true}
+              />
               <Input
                 value="123123"
                 width="300px"
@@ -163,10 +177,21 @@ class Subject extends React.Component<{}, any> {
                 defaultValue="456456"
                 suffix={<i className="iconfont icon-mine_fill"/>}
               />
+              <Input
+                width="300px"
+                round={true}
+                defaultValue="456456"
+                suffix={<i className="iconfont icon-mine_fill"/>}
+              />
             </Input.Group>
             <br/>
             <br/>
             <Input.Group direction='col'>
+              <Input
+                width="300px"
+                round={true}
+                defaultValue="456456"
+              />
               <Input
                 width="300px"
                 round={true}

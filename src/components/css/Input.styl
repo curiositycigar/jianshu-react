@@ -13,21 +13,21 @@ input[type=text],input[type=password]
     transition all .3s
     font-size 14px
     vertical-align top
-    &.round
-      border-radius InputRadius
-    &:hover, &:focus
-      border 1px solid InputHoverBorderColor
-    &:focus
-      box-shadow 0 0 3px 0 InputHoverBorderColor
-    &[disabled]
-      border 1px solid DisabledColor
-      color DisabledColor
-      cursor not-allowed
 
 .input
   border 1px solid InputBorderColor
   border-radius 5px
   width 100%
+  &.round
+    border-radius InputRadius
+  &:hover, &:focus
+    border 1px solid InputHoverBorderColor
+  &:focus
+    box-shadow 0 0 3px 0 InputHoverBorderColor
+  &[disabled]
+    border 1px solid DisabledColor
+    color DisabledColor
+    cursor not-allowed
 
 .input-affix-wrapper
   display inline-block
@@ -100,6 +100,19 @@ input[type=text],input[type=password]
 
 .input-group
   display block
+  >.input
+    border-radius 0
+  >.input-affix-wrapper
+    .input
+      border-radius 0
+  >.input-wrapper, .input-wrapper.round
+    .input
+      border-radius 0
+    >.input-affix-wrapper
+      .input
+        border-radius 0
+    .input-addon
+      border-radius 0
   &.input-group-row
     >.input:first-child
       display block
