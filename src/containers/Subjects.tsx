@@ -96,26 +96,33 @@ class Subject extends React.Component<{}, any> {
                 </Card>
               </Row.Col>
             </Row>
-            <Input
-              value="123123"
-              width="500px"
-              addonBefore={<i className="iconfont icon-mine_fill"/>}
-              addonAfter={<i className="iconfont icon-manage_fill"/>}
-              round={true}
-            />
+            <Input.Group>
+              <Input
+                value="123123"
+                width="300px"
+                addonBefore={<i className="iconfont icon-mine_fill"/>}
+                addonAfter={<i className="iconfont icon-manage_fill"/>}
+                round={true}
+              />
+              <Input
+                value="123123"
+                width="300px"
+                addonBefore={<i className="iconfont icon-mine_fill"/>}
+                addonAfter={<i className="iconfont icon-manage_fill"/>}
+                round={true}
+              />
+              <Input
+                value="123123"
+                width="300px"
+                addonBefore="before"
+                round={true}
+              />
+            </Input.Group>
             <br/>
             <br/>
             <Input
               value="123123"
-              width="500px"
-              addonBefore="before"
-              round={true}
-            />
-            <br/>
-            <br/>
-            <Input
-              value="123123"
-              width="500px"
+              width="300px"
               addonAfter="after"
               round={true}
             />
@@ -123,45 +130,86 @@ class Subject extends React.Component<{}, any> {
             <br/>
             <Input
               value="123123"
-              width="500px"
+              width="300px"
               addonBefore="before"
               preffix={<i className="iconfont icon-mine_fill"/>}
               round={true}
             />
             <br/>
             <br/>
-            <Input
-              value="123123"
-              width="500px"
-              addonAfter="after"
-              preffix={<i className="iconfont icon-mine_fill"/>}
-              round={true}
-            />
+            <Input.Group>
+              <Input
+                value="123123"
+                width="300px"
+                addonAfter="after"
+                preffix={<i className="iconfont icon-mine_fill"/>}
+                round={true}
+              />
+              <Input
+                value="123123"
+                width="300px"
+                addonAfter="after"
+                preffix={<i className="iconfont icon-mine_fill"/>}
+                round={true}
+              />
+              <Input
+                width="300px"
+                value={this.state.value}
+                round={true}
+                onChange={(value) => {
+                  this.setState({value})
+                }}
+                preffix={<i className="iconfont icon-mine_fill"/>}
+                suffix={<Icon action={true} type="delete_fill"/>}
+              />
+            </Input.Group>
             <br/>
             <br/>
             <Input
-              width="500px"
-              value={this.state.value}
-              round={true}
-              onChange={(value) => {this.setState({value})}}
-              preffix={<i className="iconfont icon-mine_fill"/>}
-              suffix={<Icon action={true} type="delete_fill"/>}
-            />
-            <br/>
-            <br/>
-            <Input
-              width="500px"
+              width="300px"
               round={true}
               defaultValue="456456"
               suffix={<i className="iconfont icon-mine_fill"/>}
             />
             <br/>
             <br/>
-            <Input
-              width="500px"
-              round={true}
-              defaultValue="456456"
-            />
+            <Input.Group>
+              <Input
+                width="300px"
+                defaultValue="LitCigar"
+                preffix={<i className="iconfont icon-mine_fill"/>}
+              />
+              <Input
+                width="300px"
+                defaultValue="litcigar@163.com"
+                preffix={<i className="iconfont icon-mail_fill"/>}
+              />
+              <Input
+                type="password"
+                width="300px"
+                defaultValue="456456"
+                preffix={<i className="iconfont icon-lock_fill"/>}
+              />
+            </Input.Group>
+            <br/>
+            <br/>
+            <Input.Group>
+              <Input
+                width="300px"
+                round={true}
+                defaultValue="456456"
+              />
+              <Input
+                width="300px"
+                round={true}
+                defaultValue="456456"
+              />
+              <Input
+                width="300px"
+                round={true}
+                defaultValue="456456"
+              />
+            </Input.Group>
             <br/>
           </TabItem>
           <TabItem tab={<span><i className="iconfont icon-like_fill"/>热门</span>} name="2">
