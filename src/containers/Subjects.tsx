@@ -25,10 +25,19 @@ class Subject extends React.Component<{}, any> {
     super(props)
   }
 
+
+  public handleClick(e: any) {
+    console.log(e.target)
+    setTimeout(() => {
+      console.log('this is e:', e.target)
+    }, 1000)
+  }
+
   public render () {
 
     return (
       <Container>
+        <Button onClick={this.handleClick}>按钮</Button>
         <Tabs defaultTab="1">
           <TabItem tab={<span><i className="iconfont icon-label_fill"/>推荐</span>} name="1">
             <Row gutter={40}>
