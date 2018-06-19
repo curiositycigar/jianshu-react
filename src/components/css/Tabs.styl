@@ -17,7 +17,7 @@
       &:after
         content: ''
         position absolute
-        left 50%
+        left 100%
         bottom: 0
         width 0
         height 2px
@@ -28,6 +28,8 @@
         &:after
           left 0
           width 100%
+        &~li:after
+          left 0
       &.active
         color #646464
         &:after
