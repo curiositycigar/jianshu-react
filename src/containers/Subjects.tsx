@@ -15,6 +15,7 @@ import Icon from '../components/Icon'
 // import {omit} from 'lodash'
 
 import './css/Subjects.styl'
+import Test from './Test';
 
 class Subject extends React.Component<{}, any> {
   public state = {
@@ -211,6 +212,7 @@ class Subject extends React.Component<{}, any> {
               />
             </Input.Group>
             <br/>
+            <Test/>
           </TabItem>
           <TabItem tab={<span><i className="iconfont icon-like_fill"/>热门</span>} name="2">
             <Tabs defaultTab="2" side={true}>
