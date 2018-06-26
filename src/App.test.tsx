@@ -1,9 +1,24 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import App from './App';
+import {
+  createStore
+} from 'redux'
+import {
+  Provider
+} from 'react-redux'
+import reducers from './reducers'
+
+import doButtonTest from '../test/Button.test'
+
+const store = createStore(reducers)
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  ReactDOM.render(<Provider store={store}>
+    <App/>
+  </Provider>, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+doButtonTest()
